@@ -1,5 +1,5 @@
 Set-Location $PSScriptRoot
-docker buildx ./rm mybuilder
+docker buildx rm mybuilder
 docker buildx create --use --name mybuilder --driver-opt network=host --buildkitd-flags '--allow-insecure-entitlement network.host'
 docker buildx ls
 docker buildx inspect --bootstrap
